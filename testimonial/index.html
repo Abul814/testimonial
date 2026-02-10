@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="splash-logo">GENZ CODERS</div>
+      <button id="start-btn">INITIALIZE SYSTEM</button>
+      <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-logo">GENZ CODERS</div>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Custom Interactve Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <header class="page-header" style="display:none;"> <!-- Hidden duplicate header, moving to team section -->
+       <h1 class="page-title premium-title">GENZ CODERS</h1>
+       <p class="page-subtitle">The minds behind the innovation</p>
+     </header>
+
+    <!-- New Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Building <span class="highlight">Digital</span> Experiences
+        </h1>
+        <p class="hero-subtitle">
+          A collective of visionary developers crafting the future of web technology.
+        </p>
+        <a href="#team-grid" class="hero-cta">Meet the Team</a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <h2 class="section-title">Who We Are</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            We are a collective of <span class="highlight">Gen Z visionaries</span> redefining the digital landscape. 
+            Born in the era of rapid tech evolution, we blend creative artistry with engineering precision.
+          </p>
+          <p>
+            Our mission is simple: to build experiences that don't just function, but <b>feel</b> alive. 
+            From immersive web apps to cutting-edge software solutions, we push the boundaries of what's possible.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="glass-orb"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+      <h2 class="section-title">What We Build</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-code service-icon"></i>
+          <h3>Web Development</h3>
+          <p>High-performance websites and web applications built with modern frameworks.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-layer-group service-icon"></i>
+          <h3>UI/UX Design</h3>
+          <p>Intuitive and stunning interfaces that prioritize user experience.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-mobile-screen service-icon"></i>
+          <h3>App Development</h3>
+          <p>Cross-platform mobile applications that bring your ideas to life.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-rocket service-icon"></i>
+          <h3>Digital Strategy</h3>
+          <p>Data-driven strategies to grow your brand and reach new audiences.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section id="process" class="section-padding">
+      <h2 class="section-title">How We Work</h2>
+      <div class="process-container">
+        <div class="process-step">
+          <div class="step-icon">
+            <i class="fa-regular fa-lightbulb"></i>
+            <span class="step-number">01</span>
+          </div>
+          <h3>Discovery</h3>
+          <p>We dive deep into your vision, goals, and audience to build a solid foundation.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="process-step">
+          <div class="step-icon">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <span class="step-number">02</span>
+          </div>
+          <h3>Design</h3>
+          <p>Crafting intuitive and stunning interfaces that resonate with your brand identity.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="process-step">
+          <div class="step-icon">
+            <i class="fa-solid fa-code"></i>
+            <span class="step-number">03</span>
+          </div>
+          <h3>Development</h3>
+          <p>Writing clean, efficient code to bring the design to life with modern tech.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="process-step">
+          <div class="step-icon">
+            <i class="fa-solid fa-rocket"></i>
+            <span class="step-number">04</span>
+          </div>
+          <h3>Launch</h3>
+          <p>Deploying your project to the world with full optimization and support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding" style="background: rgba(255,255,255,0.02);">
+      <h2 class="section-title">Client Stories</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="review-text">"GenZ Coders transformed our outdated site into a modern masterpiece. Their attention to detail is unmatched."</p>
+          <div class="client-info">
+            <img src="profile/navaneeth.jpeg" alt="Client" class="client-img"> <!-- Placeholder -->
+            <div>
+              <h4>Sarah J.</h4>
+              <span>CEO, TechNova</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="review-text">"The team understood our vision instantly. The 3D animations they added increased our engagement by 40%."</p>
+          <div class="client-info">
+            <img src="profile/imran.jpeg" alt="Client" class="client-img"> <!-- Placeholder -->
+            <div>
+              <h4>Mark R.</h4>
+              <span>Founder, StartUp X</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="review-text">"Professional, fast, and incredibly creative. They didn't just build a site; they built an experience."</p>
+          <div class="client-info">
+            <img src="profile/arif.jpg" alt="Client" class="client-img"> <!-- Placeholder -->
+            <div>
+              <h4>Emily C.</h4>
+              <span>Director, ArtSpace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+      <h2 class="section-title">Latest Insights</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-image" style="background: #222;"></div>
+          <div class="blog-content">
+            <span class="blog-date">Oct 12, 2025</span>
+            <h3>The Future of AI in Web Design</h3>
+            <p>How artificial intelligence is reshaping the way we build digital experiences.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image" style="background: #2a2a2a;"></div>
+          <div class="blog-content">
+            <span class="blog-date">Sep 28, 2025</span>
+            <h3>Optimizing for Core Web Vitals</h3>
+            <p>Essential strategies to ensure your website ranks high and loads fast.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image" style="background: #333;"></div>
+          <div class="blog-content">
+            <span class="blog-date">Sep 15, 2025</span>
+            <h3>Why 3D is the New Standard</h3>
+            <p>Moving beyond flat design to create immersive, interactive user journeys.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go into Orbit">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Stats Section -->
+    <section id="stats" class="section-padding">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="50">0</h3>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="5">0</h3>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="24">0</h3>
+          <p class="stat-label">/7 Support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+      <h2 class="section-title">Featured Works</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+            <i class="fa-solid fa-cart-shopping project-icon"></i>
+          </div>
+          <div class="project-info">
+            <h3>Nova E-Commerce</h3>
+            <p>A next-gen shopping platform with AI recommendations.</p>
+            <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+            <i class="fa-solid fa-chart-line project-icon"></i>
+          </div>
+          <div class="project-info">
+            <h3>FinTech Dashboard</h3>
+            <p>Real-time financial data visualization for enterprise.</p>
+            <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+            <i class="fa-solid fa-robot project-icon"></i>
+          </div>
+          <div class="project-info">
+            <h3>AI Chat Interface</h3>
+            <p>Futuristic conversational UI with voice integration.</p>
+            <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section Wrapper -->
+    <section id="team" class="section-padding">
+        <header class="page-header">
+            <h2 class="section-title">Meet The Minds</h2>
+            <p class="page-subtitle">The architects behind the innovation</p>
+        </header>
+
+    <div class="main-container" id="team-grid">
+      <!-- Card 1 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/arif.jpg"
+            alt="Vasken Mouradian"
+            class="profile-image"
+            style="object-position: top 20%"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">
+              Sheik Mohammed Arif A
+            </h2>
+            <p class="profile-role" data-roles='["Software Developer", "Tech Specialist"]'>Software Developer</p>
+
+            <div class="social-links">
+              <a
+                href="https://sheik4705.github.io/portfolio2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a
+                href="https://github.com/SHEIK4705"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/smarif_4705/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/sheikmohammedarif"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/imran.jpeg"
+            alt="Sarah Jenkins"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">Imran S</h2>
+            <p class="profile-role" data-roles='["MERN & SWE Developer", "Full Stack Engineer"]'>MERN & SWE Developer</p>
+
+            <div class="social-links">
+              <a
+                href="https://theimranco.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a
+                href="https://github.com/Dev-Im-Imran"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/theimran.co?igsh=bzV6cmhlNGNzMTN1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/imrans1106"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/ram1.jpeg"
+            alt="David Ross"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">Ram Kumar M</h2>
+            <p class="profile-role" data-roles='["Software Developer", "Creative Coder"]'>Software Developer</p>
+
+            <div class="social-links">
+              <a href="#" class="social-btn" title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="#" class="social-btn" title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-btn" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/abul2.jpeg"
+            alt="Emily Chen"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">Abul Suraih M</h2>
+            <p class="profile-role" data-roles='["Software Developer", "Design Enthusiast"]'>Software Developer</p>
+
+            <div class="social-links">
+              <a href="#" class="social-btn" title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="#" class="social-btn" title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-btn" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abulsuraihm/"
+                rel="noopener noreferrer"
+                class="social-btn"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/navaneeth.jpeg"
+            alt="Michael Chang"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">Navaneeth Kiran M</h2>
+            <p class="profile-role" data-roles='["Software Developer", "Problem Solver"]'>Software Developer</p>
+
+            <div class="social-links">
+              <a href="https://nk333-kiran.github.io/nk_portfolio_org/" class="social-btn" title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="https://github.com/nk333-kiran" class="social-btn" title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.instagram.com/kiran.navaneeth/" class="social-btn" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/navaneeth-kiran-8754nkaa/" class="social-btn" title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card-container">
+        <div class="profile-image-wrapper">
+          <img
+            src="profile/barath1.jpeg"
+            alt="Leila Hassan"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-content">
+            <h2 class="profile-name">Esakki Barath S</h2>
+            <p class="profile-role" data-roles='["Software Developer", "Backend Wizard"]'>Software Developer</p>
+
+            <div class="social-links">
+              <a href="#" class="social-btn" title="Portfolio"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="#" class="social-btn" title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-btn" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-btn" title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2 class="section-title" style="text-align: left; left: 0; transform: none;">Let's Talk</h2>
+          <p>Have a project in mind? We'd love to hear from you. Send us a message and we'll get back to you within 24 hours.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>hello@genzcoders.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Tech Valley, CA</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" required placeholder=" " rows="4"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">GENZ CODERS</div>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2026 GenZ Coders. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Profile Detail Modal -->
+    <div id="profile-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image-wrapper">
+             <img src="" alt="" class="modal-image">
+          </div>
+          <div class="modal-info">
+            <h2 class="modal-name"></h2>
+            <p class="modal-role"></p>
+            <p class="modal-bio">Passionate developer creating innovative solutions. Expert in crafting seamless digital experiences with a focus on performance and aesthetics.</p>
+            <div class="modal-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JS</span>
+              <span>React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
