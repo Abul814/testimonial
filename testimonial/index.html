@@ -21,14 +21,14 @@
 
     <!-- Splash Screen -->
     <div id="splash-screen">
-      <div class="splash-logo">GENZ CODERS</div>
+      <div class="splash-logo">GenZ Viber's</div>
       <button id="start-btn">INITIALIZE SYSTEM</button>
       <div class="loader-line"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-logo">GENZ CODERS</div>
+      <div class="nav-logo">GenZ Viber's</div>
       <div class="nav-links">
         <a href="#hero" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -52,8 +52,8 @@
       <div class="shape shape-3"></div>
     </div>
 
-    <header class="page-header" style="display:none;"> <!-- Hidden duplicate header, moving to team section -->
-       <h1 class="page-title premium-title">GENZ CODERS</h1>
+    <header class="page-header"> <!-- Hidden duplicate header, moving to team section -->
+       <h1 class="page-title premium-title">GenZ Viber's</h1>
        <p class="page-subtitle">The minds behind the innovation</p>
      </header>
 
@@ -90,7 +90,9 @@
           </p>
         </div>
         <div class="about-visual">
-          <div class="glass-orb"></div>
+          <div class="glass-orb">
+            <img src="profile/logo.png" alt="GenZ Viber's Logo" class="orb-logo">
+          </div>
         </div>
       </div>
     </section>
@@ -166,41 +168,40 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding" style="background: rgba(255,255,255,0.02);">
+    <section id="testimonials" class="section-padding">
       <h2 class="section-title">Client Stories</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <i class="fa-solid fa-quote-left quote-icon"></i>
-          <p class="review-text">"GenZ Coders transformed our outdated site into a modern masterpiece. Their attention to detail is unmatched."</p>
-          <div class="client-info">
-            <img src="profile/navaneeth.jpeg" alt="Client" class="client-img"> <!-- Placeholder -->
-            <div>
-              <h4>Sarah J.</h4>
-              <span>CEO, TechNova</span>
+      <div class="carousel-container">
+        <div class="carousel-viewport">
+          <div class="testimonials-grid carousel-track">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <p class="review-text">"GenZ Coders transformed our outdated site into a modern masterpiece. Their attention to detail is unmatched."</p>
+            </div>
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <p class="review-text">"The team understood our vision instantly. The 3D animations they added increased our engagement by 40%."</p>
+            </div>
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <p class="review-text">"Professional, fast, and incredibly creative. They didn't just build a site; they built an experience."</p>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <i class="fa-solid fa-quote-left quote-icon"></i>
-          <p class="review-text">"The team understood our vision instantly. The 3D animations they added increased our engagement by 40%."</p>
-          <div class="client-info">
-            <img src="profile/imran.jpeg" alt="Client" class="client-img"> <!-- Placeholder -->
-            <div>
-              <h4>Mark R.</h4>
-              <span>Founder, StartUp X</span>
-            </div>
-          </div>
+        
+        <!-- Carousel Controls -->
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
-        <div class="testimonial-card">
-          <i class="fa-solid fa-quote-left quote-icon"></i>
-          <p class="review-text">"Professional, fast, and incredibly creative. They didn't just build a site; they built an experience."</p>
-          <div class="client-info">
-            <img src="profile/arif.jpg" alt="Client" class="client-img"> <!-- Placeholder -->
-            <div>
-              <h4>Emily C.</h4>
-              <span>Director, ArtSpace</span>
-            </div>
-          </div>
+        
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
@@ -210,7 +211,7 @@
       <h2 class="section-title">Latest Insights</h2>
       <div class="blog-grid">
         <div class="blog-card">
-          <div class="blog-image" style="background: #222;"></div>
+          <div class="blog-image blog-image-1"></div>
           <div class="blog-content">
             <span class="blog-date">Oct 12, 2025</span>
             <h3>The Future of AI in Web Design</h3>
@@ -219,7 +220,7 @@
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-image" style="background: #2a2a2a;"></div>
+          <div class="blog-image blog-image-2"></div>
           <div class="blog-content">
             <span class="blog-date">Sep 28, 2025</span>
             <h3>Optimizing for Core Web Vitals</h3>
@@ -228,7 +229,7 @@
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-image" style="background: #333;"></div>
+          <div class="blog-image blog-image-3"></div>
           <div class="blog-content">
             <span class="blog-date">Sep 15, 2025</span>
             <h3>Why 3D is the New Standard</h3>
@@ -248,15 +249,15 @@
     <section id="stats" class="section-padding">
       <div class="stats-container">
         <div class="stat-item">
-          <h3 class="stat-number" data-target="50">0</h3>
+          <h3 class="stat-number" data-target="10">0</h3>
           <p class="stat-label">Projects Completed</p>
         </div>
         <div class="stat-item">
-          <h3 class="stat-number" data-target="100">0</h3>
+          <h3 class="stat-number" data-target="5">0</h3>
           <p class="stat-label">Happy Clients</p>
         </div>
         <div class="stat-item">
-          <h3 class="stat-number" data-target="5">0</h3>
+          <h3 class="stat-number" data-target="2">0</h3>
           <p class="stat-label">Years Experience</p>
         </div>
         <div class="stat-item">
@@ -269,32 +270,44 @@
     <!-- Projects Section -->
     <section id="projects" class="section-padding">
       <h2 class="section-title">Featured Works</h2>
+      
+      <!-- Project Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+      </div>
+
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+        <div class="project-card" data-category="web">
+          <div class="project-image">
             <i class="fa-solid fa-cart-shopping project-icon"></i>
           </div>
           <div class="project-info">
+            <span class="project-tag">Web App</span>
             <h3>Nova E-Commerce</h3>
             <p>A next-gen shopping platform with AI recommendations.</p>
             <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+        <div class="project-card" data-category="dashboard">
+          <div class="project-image">
             <i class="fa-solid fa-chart-line project-icon"></i>
           </div>
           <div class="project-info">
+            <span class="project-tag">Dashboard</span>
             <h3>FinTech Dashboard</h3>
             <p>Real-time financial data visualization for enterprise.</p>
             <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+        <div class="project-card" data-category="ai">
+          <div class="project-image">
             <i class="fa-solid fa-robot project-icon"></i>
           </div>
           <div class="project-info">
+            <span class="project-tag">AI / UI</span>
             <h3>AI Chat Interface</h3>
             <p>Futuristic conversational UI with voice integration.</p>
             <a href="#" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
@@ -317,8 +330,7 @@
           <img
             src="profile/arif.jpg"
             alt="Vasken Mouradian"
-            class="profile-image"
-            style="object-position: top 20%"
+            class="profile-image profile-image-arif"
           />
         </div>
 
@@ -420,43 +432,7 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="card-container">
-        <div class="profile-image-wrapper">
-          <img
-            src="profile/ram1.jpeg"
-            alt="David Ross"
-            class="profile-image"
-          />
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-content">
-            <h2 class="profile-name">Ram Kumar M</h2>
-            <p class="profile-role" data-roles='["Software Developer", "Creative Coder"]'>Software Developer</p>
-
-            <div class="social-links">
-              <a href="#" class="social-btn" title="Portfolio"
-                ><i class="fa-solid fa-globe"></i
-              ></a>
-              <a href="#" class="social-btn" title="GitHub"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="#" class="social-btn" title="Instagram"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
-                rel="noopener noreferrer"
-                class="social-btn"
-                title="LinkedIn"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+     
       <!-- Card 4 -->
       <div class="card-container">
         <div class="profile-image-wrapper">
@@ -473,13 +449,13 @@
             <p class="profile-role" data-roles='["Software Developer", "Design Enthusiast"]'>Software Developer</p>
 
             <div class="social-links">
-              <a href="#" class="social-btn" title="Portfolio"
+              <a href="https://theabul.web.app/" class="social-btn" title="Portfolio"
                 ><i class="fa-solid fa-globe"></i
               ></a>
-              <a href="#" class="social-btn" title="GitHub"
+              <a href="https://github.com/Abul814" class="social-btn" title="GitHub"
                 ><i class="fa-brands fa-github"></i
               ></a>
-              <a href="#" class="social-btn" title="Instagram"
+              <a href="https://www.instagram.com/visualarts_and_quotes/" class="social-btn" title="Instagram"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
               <a
@@ -543,16 +519,16 @@
             <p class="profile-role" data-roles='["Software Developer", "Backend Wizard"]'>Software Developer</p>
 
             <div class="social-links">
-              <a href="#" class="social-btn" title="Portfolio"
+              <a href="https://esakkibaraths.web.app/" class="social-btn" title="Portfolio"
                 ><i class="fa-solid fa-globe"></i
               ></a>
-              <a href="#" class="social-btn" title="GitHub"
+              <a href="https://github.com/Barathraj432" class="social-btn" title="GitHub"
                 ><i class="fa-brands fa-github"></i
               ></a>
-              <a href="#" class="social-btn" title="Instagram"
+              <a href="https://www.instagram.com/offx_barath.34?igsh=czdicG5vNWpmaXRr" class="social-btn" title="Instagram"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="#" class="social-btn" title="LinkedIn"
+              <a href="www.linkedin.com/in/barath-cse" class="social-btn" title="LinkedIn"
                 ><i class="fa-brands fa-linkedin-in"></i
               ></a>
             </div>
@@ -566,21 +542,21 @@
     <section id="contact" class="section-padding">
       <div class="contact-container">
         <div class="contact-info">
-          <h2 class="section-title" style="text-align: left; left: 0; transform: none;">Let's Talk</h2>
+          <h2 class="section-title contact-title">Let's Talk</h2>
           <p>Have a project in mind? We'd love to hear from you. Send us a message and we'll get back to you within 24 hours.</p>
           <div class="contact-details">
-            <div class="contact-item">
+            <a href="mailto:genzcoder2k26@gmail.com" class="contact-item">
               <i class="fa-solid fa-envelope"></i>
-              <span>hello@genzcoders.com</span>
-            </div>
-            <div class="contact-item">
+              <span>genzcoder2k26@gmail.com</span>
+            </a>
+            <a href="tel:+917904889179" class="contact-item">
               <i class="fa-solid fa-phone"></i>
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <div class="contact-item">
+              <span>+91 7904889179</span>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tenkasi,Tamil+Nadu,India" target="_blank" rel="noopener" class="contact-item">
               <i class="fa-solid fa-location-dot"></i>
-              <span>Tech Valley, CA</span>
-            </div>
+              <span>Tenkasi, Tamil Nadu, India</span>
+            </a>
           </div>
         </div>
         <form class="contact-form" id="contact-form">
@@ -604,15 +580,15 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <div class="footer-logo">GENZ CODERS</div>
+        <div class="footer-logo">GenZ Viber's</div>
         <div class="footer-socials">
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:genzcoder2k26@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <div class="copyright">
-          &copy; 2026 GenZ Coders. All Rights Reserved.
+          &copy; 2026 GenZ Viber's. All Rights Reserved.
         </div>
       </div>
     </footer>

@@ -573,3 +573,175 @@ if (contactForm) {
         }, 1500);
     });
 }
+
+// --- Testimonial Carousel Logic ---
+class TestimonialCarousel {
+    constructor() {
+        this.container = document.querySelector('.carousel-container');
+        if (!this.container) return;
+
+        this.track = this.container.querySelector('.carousel-track');
+        this.slides = Array.from(this.track.children);
+        this.nextBtn = this.container.querySelector('.next');
+        this.prevBtn = this.container.querySelector('.prev');
+        this.dotsContainer = this.container.querySelector('.carousel-dots');
+        this.dots = Array.from(this.dotsContainer.children);
+
+        this.currentIndex = 0;
+        this.autoPlayDelay = 5000;
+        this.autoPlayTimer = null;
+
+        this.init();
+    }
+
+    init() {
+        // Event Listeners
+        this.nextBtn.addEventListener('click', () => {
+            this.next();
+            this.resetAutoPlay();
+        });
+
+        this.prevBtn.addEventListener('click', () => {
+            this.prev();
+            this.resetAutoPlay();
+        });
+
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goto(index);
+                this.resetAutoPlay();
+            });
+        });
+
+        // Pause on hover
+        this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+
+        // Initial setup
+        this.update();
+        this.startAutoPlay();
+
+        // Handle Resize
+        window.addEventListener('resize', () => this.update());
+    }
+
+    update() {
+        const slideWidth = this.slides[0].getBoundingClientRect().width;
+        const gap = 30; // Matches CSS gap
+        
+        // Calculate offset based on index and visible slides
+        let visibleSlides = 3;
+        if (window.innerWidth <= 768) visibleSlides = 1;
+        else if (window.innerWidth <= 1100) visibleSlides = 2;
+
+        const maxIndex = Math.max(0, this.slides.length - visibleSlides);
+        if (this.currentIndex > maxIndex) this.currentIndex = maxIndex;
+
+        const offset = this.currentIndex * (slideWidth + gap);
+        this.track.style.transform = `translateX(-${offset}px)`;
+
+        // Update dots
+        this.dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === this.currentIndex);
+            // Hide dots that exceed maxIndex to avoid "empty" slides
+            dot.style.display = i > maxIndex ? 'none' : 'block';
+        });
+    }
+
+    next() {
+        let visibleSlides = 3;
+        if (window.innerWidth <= 768) visibleSlides = 1;
+        else if (window.innerWidth <= 1100) visibleSlides = 2;
+
+        const maxIndex = Math.max(0, this.slides.length - visibleSlides);
+        this.currentIndex = (this.currentIndex >= maxIndex) ? 0 : this.currentIndex + 1;
+        this.update();
+    }
+
+    prev() {
+        let visibleSlides = 3;
+        if (window.innerWidth <= 768) visibleSlides = 1;
+        else if (window.innerWidth <= 1100) visibleSlides = 2;
+
+        const maxIndex = Math.max(0, this.slides.length - visibleSlides);
+        this.currentIndex = (this.currentIndex <= 0) ? maxIndex : this.currentIndex - 1;
+        this.update();
+    }
+
+    goto(index) {
+        this.currentIndex = index;
+        this.update();
+    }
+
+    startAutoPlay() {
+        this.stopAutoPlay();
+        this.autoPlayTimer = setInterval(() => this.next(), this.autoPlayDelay);
+    }
+
+    stopAutoPlay() {
+        if (this.autoPlayTimer) clearInterval(this.autoPlayTimer);
+    }
+
+    resetAutoPlay() {
+        this.stopAutoPlay();
+        this.startAutoPlay();
+    }
+}
+
+// Initialize Carousel when loaded
+window.addEventListener('load', () => {
+    new TestimonialCarousel();
+    new ProjectFilter();
+});
+
+// --- Project Filtering Logic ---
+class ProjectFilter {
+    constructor() {
+        this.filters = document.querySelectorAll('.filter-btn');
+        this.projects = document.querySelectorAll('.project-card');
+        
+        if (this.filters.length === 0) return;
+        
+        this.init();
+    }
+
+    init() {
+        this.filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-filter');
+                
+                // Update Button Active State
+                this.filters.forEach(f => f.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Play Click Sound
+                if (typeof sfx !== 'undefined') sfx.playClick();
+                
+                this.filter(category);
+            });
+        });
+    }
+
+    filter(category) {
+        this.projects.forEach(card => {
+            const projectCat = card.getAttribute('data-category');
+            
+            if (category === 'all' || projectCat === category) {
+                card.classList.remove('hide');
+                // Ensure it's visible after removing hide
+                setTimeout(() => {
+                    card.style.position = 'relative';
+                    card.style.visibility = 'visible';
+                }, 400);
+            } else {
+                card.classList.add('hide');
+                // Wait for animation then pull from flow
+                setTimeout(() => {
+                    if (card.classList.contains('hide')) {
+                        card.style.position = 'absolute';
+                    }
+                }, 400);
+            }
+        });
+    }
+}
